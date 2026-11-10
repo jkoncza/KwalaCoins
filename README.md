@@ -13,7 +13,7 @@ but with its own chain, supply, speed, addresses, ports, genesis block, message-
 | Max supply | **500,000,000 KWALA** |
 | Block time | **120 seconds** target |
 | Block reward | 100 KWALA, halving every 2,500,000 blocks (~9.5 years at 120 s) |
-| Difficulty retarget | every 720 blocks (~1 day), so it reacts to hash power quickly |
+| Difficulty retarget | every 30 blocks (~1 hour), so it reacts to hash power quickly |
 | Algorithm | SHA-256d proof-of-work, Schnorr/Taproot, SegWit, v2 encrypted P2P |
 | Ports | P2P 9777, RPC 9776 (testnet 19777/19776, regtest 19444/19443) |
 | Addresses | legacy `W...`, script `K...`, bech32 `kwala1...` (testnet `tkwala1...`) |
