@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#
+#  kwalacoind The kwalacoin core server.
+#
+#
+# chkconfig: 345 80 20
+# description: kwalacoind
+# processname: kwalacoind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/kwalacoind, see below
+if [ -f /etc/sysconfig/kwalacoind ]; then
+        . /etc/sysconfig/kwalacoind
+fi
+
+RETVAL=0
+
+prog=kwalacoind
+# you can override the lockfile via KWALACOIND_LOCKFILE in /etc/sysconfig/kwalacoind
+lockfile=${KWALACOIND_LOCKFILE-/var/lock/subsys/kwalacoind}
+
+# kwalacoind defaults to /usr/bin/kwalacoind, override with KWALACOIND_BIN
+kwalacoind=${KWALACOIND_BIN-/usr/bin/kwalacoind}
+
+# kwalacoind opts default to -disablewallet, override with KWALACOIND_OPTS
+kwalacoind_opts=${KWALACOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $kwalacoind $kwalacoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog -t600
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

@@ -1,0 +1,33 @@
+# /etc/conf.d/kwalacoind: config file for /etc/init.d/kwalacoind
+
+# Config file location
+#KWALACOIND_CONFIGFILE="/etc/kwalacoin/kwalacoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $KWALACOIND_USER)
+#KWALACOIND_PIDDIR="/var/run/kwalacoind"
+
+# What filename to give the pidfile
+#KWALACOIND_PIDFILE="${KWALACOIND_PIDDIR}/kwalacoind.pid"
+
+# Where to write kwalacoind data (be mindful that the blockchain is large)
+#KWALACOIND_DATADIR="/var/lib/kwalacoind"
+
+# User and group to own kwalacoind process
+#KWALACOIND_USER="kwalacoin"
+#KWALACOIND_GROUP="kwalacoin"
+
+# Path to kwalacoind executable
+#KWALACOIND_BIN="/usr/bin/kwalacoind"
+
+# Nice value to run kwalacoind under
+#KWALACOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#KWALACOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for kwalacoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+KWALACOIND_SIGTERM_TIMEOUT=600

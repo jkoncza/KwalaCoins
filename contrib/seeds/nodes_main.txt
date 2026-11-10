@@ -1,0 +1,6 @@
+# KwalaCoins fixed seed list (mainnet).
+# One reachable, long-running KwalaCoins node per line, as:  <ip>:<port>   [<ipv6>]:<port>   <name>.onion:<port>
+# Port for mainnet is 9777. NEVER add unverified or invented addresses.
+# This list is intentionally EMPTY: no public KwalaCoins bootstrap nodes have been deployed yet.
+# After deploying real nodes, add them here and run (from the repo root):
+#   python3 contrib/seeds/generate-seeds.py contrib/seeds > src/chainparamsseeds.h

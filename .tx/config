@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[o:kwalacoin:p:kwalacoin:r:qt-translation-028x]
+file_filter = src/qt/locale/kwalacoin_<lang>.xlf
+source_file = src/qt/locale/kwalacoin_en.xlf
+source_lang = en

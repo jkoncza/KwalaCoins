@@ -1,0 +1,13 @@
+# KwalaCoins sample config -> copy to ~/.kwalacoin/kwalacoin.conf
+server=1
+daemon=1
+rpcbind=127.0.0.1
+rpcallowip=127.0.0.1
+# P2P port 9777, RPC port 9776
+# Peer discovery. No public seed servers exist yet; once real ones are deployed use e.g.:
+#dnsseed=1
+#dnsseedhost=<your-seed-domain-1>
+#dnsseedhost=<your-seed-domain-2>
+#fixedseedfile=/path/to/nodes_main.txt
+# Until then connect to other nodes manually:
+#addnode=<ip-of-another-kwalacoins-node>:9777
