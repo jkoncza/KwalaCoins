@@ -30,6 +30,46 @@ but with its own chain, supply, speed, addresses, ports, genesis block, message-
 - **Own genesis** for mainnet and testnet, with an easy starting difficulty so a new network can bootstrap.
 - Supply math is checked: `python3 contrib/kwalacoins/check_supply.py` -> 499,999,999.725 KWALA (<= cap).
 
+
+## 🌐 Connecting to the KwalaCoins Network
+
+KwalaCoins currently does not have public DNS seed servers. To connect to the KwalaCoins network, users must manually add an initial peer.
+
+### Method 1: Using the `kwalacoin.conf` File
+
+1. Press `Win + R` on your keyboard.
+2. Enter `%APPDATA%\KwalaCoin` and press Enter. This opens your KwalaCoins data directory inside your Windows user profile.
+3. Look for a file named `kwalacoin.conf`.
+4. If the file does not exist, create a new text file named `kwalacoin.conf`.
+5. Open the file and add the following line:
+
+```ini
+addnode=158.247.73.205:9777
+```
+
+6. Save the file and restart your KwalaCoins wallet.
+
+### Method 2: Using the GUI Console
+
+1. Open your KwalaCoins wallet.
+2. Navigate to **Window → Console**.
+3. Enter the following command:
+
+```bash
+addnode "158.247.73.205:9777" "add"
+```
+
+4. Press Enter to connect to the KwalaCoins network.
+
+### Network Information
+
+The following node is provided as an initial connection point for users joining the KwalaCoins network:
+
+**Node:** `158.247.73.205:9777`
+
+As the KwalaCoins network grows, additional public nodes and DNS seed servers may become available.
+
+
 ## Build (verified on Linux, g++ 13)
     ./autogen.sh
     ./configure --without-gui --enable-wallet
