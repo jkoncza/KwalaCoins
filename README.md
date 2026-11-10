@@ -18,7 +18,7 @@ but with its own chain, supply, speed, addresses, ports, genesis block, message-
 | Ports | P2P 9777, RPC 9776 (testnet 19777/19776, regtest 19444/19443) |
 | Addresses | legacy `W...`, script `K...`, bech32 `kwala1...` (testnet `tkwala1...`) |
 | Network magic | `c7 4b 57 a1` |
-| Genesis | `000005a7744de206a970ec5617008850bf853009c2f121f087c63c7902a72625` (5 Nov 2026) |
+| Genesis | `00000054d99e34f12dcbfe25082833e2e1d28a455be6fde4faac5fc1acf03cb1` (5 Nov 2026) |
 | Data dir / config | `~/.kwalacoin/kwalacoin.conf` (see `kwalacoin.conf.example`) |
 | User agent | `/KwalaCoins:1.0.0/` |
 
