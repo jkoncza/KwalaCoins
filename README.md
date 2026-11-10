@@ -48,14 +48,6 @@ For local testing use `-regtest` (`kwalacoin-cli -regtest generatetoaddress 101 
 - `-dnsseedhost=<domain>` and `-fixedseedfile=<file>` let you supply seeds without rebuilding.
 - `python3 test/kwalacoins/network_tests.py --bin src` runs the 3-node network test-suite (9 tests, passing on Linux).
 
-## Honest status
-- Compiled and smoke-tested: node boots on mainnet with the right genesis, regtest mines 100 KWALA blocks,
-  wallet creates `kwala1...`/`W...`/`K...` addresses and sends/receives coins.
-- The Qt GUI, Bitcoin's unit/functional test suites and cross-platform builds were **not** built or run
-  (many of their fixtures use Bitcoin's old values and need updating).
-- Known leftovers: coinbase maturity is still 100 blocks (about 200 min); the inherited retarget off-by-one
-  is unchanged; BIP32's `Bitcoin seed` HMAC key is kept so standard wallets/seeds stay compatible.
-- Not security-audited. Launching a real network needs seed nodes, miners and review. Not financial advice.
 
 ## License
 MIT (see `COPYING`). Built on Bitcoin Core, (c) The Bitcoin Core developers; KwalaCoins changes (c) 2026 The KwalaCoins developers.
