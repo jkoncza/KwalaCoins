@@ -37,7 +37,7 @@ KwalaCoins currently does not have public DNS seed servers. To connect to the Kw
 
 ### Method 1: Using the `kwalacoin.conf` File
 
-1. Press `Win + R` on your keyboard.
+1. Open File Explorer Then go into your search bar.
 2. Enter `C:\Users\<YOUR_USER_NAME>\AppData\Local\KwalaCoin` and press Enter. This opens your KwalaCoins data directory inside your Windows user profile.
 3. Look for a file named `kwalacoin.conf`.
 4. If the file does not exist, create a new text file named `kwalacoin.conf`.
