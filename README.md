@@ -4,14 +4,14 @@
 
 **KwalaCoins is its own coin and network**, built from the open-source Bitcoin Core codebase (MIT license)
 but with its own chain, supply, speed, addresses, ports, genesis block, message-signing domain and branding.
-Ticker: **KWALA**. Programs: `kwalacoind`, `kwalacoin-cli`, `kwalacoin-tx`, `kwalacoin-util`, `kwalacoin-wallet`.
+ Programs: `kwalacoind`, `kwalacoin-cli`, `kwalacoin-tx`, `kwalacoin-util`, `kwalacoin-wallet`.
 
 ## Specs
 
 | | KwalaCoins |
 |---|---|
 | Max supply | **500,000,000 KWALA** |
-| Block time | **120 seconds** target (5x faster confirmations than Bitcoin) |
+| Block time | **120 seconds** target |
 | Block reward | 100 KWALA, halving every 2,500,000 blocks (~9.5 years at 120 s) |
 | Difficulty retarget | every 720 blocks (~1 day), so it reacts to hash power quickly |
 | Algorithm | SHA-256d proof-of-work, Schnorr/Taproot, SegWit, v2 encrypted P2P |
@@ -26,9 +26,7 @@ Ticker: **KWALA**. Programs: `kwalacoind`, `kwalacoin-cli`, `kwalacoin-tx`, `kwa
 - **Timewarp attack fix** (BIP94 rules) enforced from block 1 on every KwalaCoins network.
 - **No legacy baggage:** BIP34/65/66, CSV, SegWit and Taproot are active from genesis; no historic
   script-validation exceptions, checkpoints, assumeutxo snapshots or inherited Bitcoin seed nodes.
-- **Fully isolated network:** own magic bytes, ports, address formats, bech32 prefix, and message-signing
-  domain (`KwalaCoins Signed Message:`) so keys/messages can't be confused with Bitcoin's.
-- **Faster and more responsive:** 120s blocks plus daily difficulty retargeting.
+- **Faster and more responsive:** daily difficulty retargeting.
 - **Own genesis** for mainnet and testnet, with an easy starting difficulty so a new network can bootstrap.
 - Supply math is checked: `python3 contrib/kwalacoins/check_supply.py` -> 499,999,999.725 KWALA (<= cap).
 
