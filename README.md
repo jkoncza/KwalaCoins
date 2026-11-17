@@ -72,7 +72,7 @@ As the KwalaCoins network grows, additional public nodes and DNS seed servers ma
 
 ## Build (verified on Linux, g++ 13)
     ./autogen.sh
-    ./configure --without-gui --enable-wallet
+    ./configure --enable-wallet
     make -j$(nproc)          # binaries land in src/
 See `doc/build-unix.md` for dependencies (Boost headers, libevent, sqlite3).
 
